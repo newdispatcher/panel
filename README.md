@@ -44,6 +44,7 @@ you the power to run game servers without bloating machines with a host of addit
 Some of our core supported games include:
 
 * Minecraft — including Paper, Sponge, Bungeecord, Waterfall, and more
+  * **NEW: Minecraft Addon Manager** — Search, install, and manage mods from CurseForge and Modrinth, plugins from SpigotMC, and world management with import/export capabilities
 * Rust
 * Terraria
 * Teamspeak
@@ -64,6 +65,44 @@ and there are plenty more games available provided by the community. Some of the
 * Starmade
 * Discord ATLBot, and most other Node.js/Python discord bots
 * [and many more...](https://pterodactyleggs.com)
+
+## Features
+
+### Minecraft Addon Manager
+
+Pterodactyl now includes a comprehensive **Minecraft Addon Manager** that provides:
+
+#### 🔧 **Mod & Plugin Management**
+- **Multi-Platform Search**: Search and install mods from CurseForge and Modrinth
+- **Plugin Integration**: Browse and install plugins from CurseForge, Modrinth, and SpigotMC
+- **Version Support**: Full support for Forge, Fabric, and Bukkit/Spigot/Paper platforms
+- **Game Version Filtering**: Filter addons by specific Minecraft versions
+- **One-Click Installation**: Direct installation to your server with automatic file placement
+
+#### 🌍 **World Management**
+- **World Creation**: Create new worlds with customizable settings
+- **Import/Export**: Import worlds from ZIP files or export existing worlds
+- **World Browser**: View all server worlds with size and modification info
+- **Backup Integration**: Export worlds as ZIP files for easy backup and sharing
+
+#### 📊 **Export & Analytics**
+- **Addon Export**: Export your installed mods and plugins list as JSON or CSV
+- **World Export**: Export individual worlds as ZIP archives
+- **Usage Tracking**: Monitor addon usage and world statistics
+
+#### 🎨 **Unified Interface**
+- **Integrated UI**: Seamless integration with the existing Pterodactyl panel design
+- **Tabbed Interface**: Easy navigation between search, installed addons, and world management
+- **Real-time Updates**: Live updates when installing, uninstalling, or managing content
+- **Responsive Design**: Works perfectly on desktop and mobile devices
+
+#### ⚙️ **Configuration**
+To enable CurseForge integration, add your API key to your environment configuration:
+```bash
+CURSEFORGE_API_KEY=your_curseforge_api_key_here
+```
+
+The addon manager automatically integrates with your existing Pterodactyl installation and supports all Docker-based Minecraft server configurations.
 
 ## License
 
