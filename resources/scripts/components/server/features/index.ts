@@ -12,6 +12,7 @@ const features: Record<string, ComponentType> = {
     gsl_token: lazy(() => import('@feature/GSLTokenModalFeature')),
     pid_limit: lazy(() => import('@feature/PIDLimitModalFeature')),
     steam_disk_space: lazy(() => import('@feature/SteamDiskSpaceFeature')),
+    addon_manager: lazy(() => import('@feature/addon-manager/AddonManagerFeature')),
 };
 
 export default features;

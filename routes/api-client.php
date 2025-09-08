@@ -139,4 +139,26 @@ Route::group([
         Route::post('/reinstall', [Client\Servers\SettingsController::class, 'reinstall']);
         Route::put('/docker-image', [Client\Servers\SettingsController::class, 'dockerImage']);
     });
+
+    Route::group(['prefix' => '/addons'], function () {
+        // Addon search and management
+        Route::get('/search', [Client\Servers\AddonController::class, 'search']);
+        Route::get('/addon', [Client\Servers\AddonController::class, 'getAddon']);
+        Route::get('/addon-versions', [Client\Servers\AddonController::class, 'getVersions']);
+        Route::post('/install', [Client\Servers\AddonController::class, 'installAddon']);
+        Route::get('/installed', [Client\Servers\AddonController::class, 'listInstalled']);
+        Route::delete('/uninstall', [Client\Servers\AddonController::class, 'uninstallAddon']);
+        Route::post('/export', [Client\Servers\AddonController::class, 'exportAddons']);
+        Route::get('/download-export/{file}', [Client\Servers\AddonController::class, 'downloadExport'])->name('api.client.servers.addons.download-export');
+        
+        // World management
+        Route::get('/worlds', [Client\Servers\AddonController::class, 'listWorlds']);
+        Route::post('/worlds', [Client\Servers\AddonController::class, 'createWorld']);
+        Route::delete('/worlds', [Client\Servers\AddonController::class, 'deleteWorld']);
+        Route::post('/worlds/export', [Client\Servers\AddonController::class, 'exportWorld']);
+        Route::post('/worlds/import', [Client\Servers\AddonController::class, 'importWorld']);
+        
+        // Platform information
+        Route::get('/supported-versions', [Client\Servers\AddonController::class, 'getSupportedVersions']);
+    });
 });

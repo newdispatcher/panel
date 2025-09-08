@@ -192,6 +192,7 @@ return [
          * Application Service Providers...
          */
         Pterodactyl\Providers\ActivityLogServiceProvider::class,
+        Pterodactyl\Providers\AddonServiceProvider::class,
         Pterodactyl\Providers\AppServiceProvider::class,
         Pterodactyl\Providers\AuthServiceProvider::class,
         Pterodactyl\Providers\BackupsServiceProvider::class,
